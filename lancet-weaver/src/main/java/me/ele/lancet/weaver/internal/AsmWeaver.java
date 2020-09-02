@@ -17,8 +17,8 @@ public class AsmWeaver implements Weaver {
      * Create a AsmWeaver instance. In a compilation process, the AsmWeaver instance will only be created once.
      *
      * @param transformInfo the transformInfo for this compilation process.
-     * @param graph
-     * @return
+     * @param graph graph
+     * @return Weaver Weaver
      */
     public static Weaver newInstance(TransformInfo transformInfo, Graph graph) {
         return new AsmWeaver(transformInfo, graph);

@@ -16,9 +16,9 @@ public interface QualifiedContentProvider {
 
     /**
      * start accept the classes
-     * @param content
-     * @param processor
-     * @throws IOException
+     * @param content content
+     * @param processor processor
+     * @throws IOException IOException
      */
     void forEach(QualifiedContent content, ClassFetcher processor) throws IOException;
 

@@ -51,8 +51,8 @@ public class ContextReader {
      * read the classes in thread pool and send class to fetcher.
      * @param incremental is incremental compile
      * @param fetcher the fetcher to visit classes
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException IOException
+     * @throws InterruptedException InterruptedException
      */
     public void accept(boolean incremental, ClassFetcher fetcher) throws IOException, InterruptedException {
 

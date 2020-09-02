@@ -13,10 +13,10 @@ buildscript {
             bintrayKey = properties.getProperty('bintrayKey')
         }
         lancet_group = 'me.ele'
-        lancet_version = '1.0.6'
+        lancet_version = '1.0.8'
         //lancet_version = '0.0.1.8-SNAPSHOT'
 
-        asm_version = '5.1'
+        asm_version = '6.0'
         //android_tools_version = '2.4.0-alpha6'
         android_tools_version = '3.3.2'
         guava_version = '24.0'
@@ -28,7 +28,8 @@ buildscript {
             if (ele) {
                 url "http://maven.dev.elenet.me/nexus/content/groups/public"
             } else {
-                url "https://dl.bintray.com/eleme-mt-arch/maven"
+//                url "https://dl.bintray.com/eleme-mt-arch/maven"
+                url "https://dl.bintray.com/henrypirotccr/lancet-asm"
             }
         }
     }
@@ -118,16 +119,16 @@ subprojects { pro ->
             }
         }
         bintray {
-            user = bintrayUser
-            key = bintrayKey
+            user = ''
+            key = ''
             configurations = ['archives']
             pkg {
-                userOrg = "eleme-mt-arch"
-                repo = "maven"
-                userOrg = "eleme-mt-arch"
-                name = pro.name    //发布到JCenter上的项目名字
-                websiteUrl = "https://github.com/eleme/lancet"
-                vcsUrl = "git@github.com:eleme/lancet.git"
+                userOrg = "henrypirotccr"
+                repo = "lancet-asm"
+                userOrg = "henrypirotccr"
+                name = 'lancet-asm'    //发布到JCenter上的项目名字
+                websiteUrl = "https://github.com/HenryPirot/lancet.git"
+                vcsUrl = "git@github.com:HenryPirot/lancet.git"
                 licenses = ["Apache-2.0"]
                 publish = true
             }

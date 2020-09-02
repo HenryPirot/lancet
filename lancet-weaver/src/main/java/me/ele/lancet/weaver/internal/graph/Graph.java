@@ -79,7 +79,7 @@ public class Graph {
         return node != null;
     }
 
-    /**
+    /*
      * assert class always in nodeMap, if not, it's our code error.
      */
     public NodeVisitor childrenOf(String className, Scope scope) {

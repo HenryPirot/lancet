@@ -48,11 +48,11 @@ public class PreClassAnalysis {
      * start pre-analysis, the only API for pre-analysis.
      * this method will block until pre-analysis finish.
      *
-     * @param incremental
-     * @param context
+     * @param incremental incremental
+     * @param context context
      * @return is incremental compile mode
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException IOException
+     * @throws InterruptedException InterruptedException
      */
     public boolean execute(boolean incremental, TransformContext context) throws IOException, InterruptedException {
         Log.d(context.toString());
