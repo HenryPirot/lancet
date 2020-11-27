@@ -12,8 +12,8 @@ buildscript {
             bintrayUser = properties.getProperty('bintrayUser')
             bintrayKey = properties.getProperty('bintrayKey')
         }
-        lancet_group = 'me.ele'
-        lancet_version = '1.0.8'
+        lancet_group = 'no.ele.asm'
+        lancet_version = '1.0.10'
         //lancet_version = '0.0.1.8-SNAPSHOT'
 
         asm_version = '6.0'
@@ -24,6 +24,8 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
         maven {
             if (ele) {
                 url "http://maven.dev.elenet.me/nexus/content/groups/public"
@@ -49,6 +51,10 @@ subprojects { pro ->
     repositories {
         jcenter()
         mavenCentral()
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
         maven {
             url 'https://maven.google.com'
         }
@@ -119,8 +125,8 @@ subprojects { pro ->
             }
         }
         bintray {
-            user = ''
-            key = ''
+            user = 'henrypirotccr'
+            key = '2969f349694fb190ad7da3e13c71fbcb64233912'
             configurations = ['archives']
             pkg {
                 userOrg = "henrypirotccr"
